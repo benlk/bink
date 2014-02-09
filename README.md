@@ -1,6 +1,8 @@
-# A Custom Theme for Dropplets
+# Bink: a theme for Dropplets
 
-This theme is a single-author fork of [Jason Schuller][]'s `simple` theme that is packaged with [Dropplets 1.5][], incorporating some code from [Simple Dark][] by [Chris Reynolds][].
+> adj: 1. (slang) refers to a sharp dresser or swell looker. see also: dapper
+
+This theme is a single-author fork of [Jason Schuller][]'s `simple` theme that is packaged with [Dropplets 1.5][], incorporating some styling from [Simple Dark][] by [Chris Reynolds][] and other places. 
 
 ## Features:
 
@@ -9,7 +11,7 @@ This theme is a single-author fork of [Jason Schuller][]'s `simple` theme that i
 * Optional buttons in the intro
 * Square buttons
 * No per-post author in posts list
-* Formatting for `aside` posts (depends on benlk/dropplets/custom-posts)
+* Formatting for `aside` posts
 
 ### Custom post types
 
