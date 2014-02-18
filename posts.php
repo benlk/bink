@@ -36,9 +36,9 @@ foreach (glob($template_dir . "posts/*.php") as $filename) {
     //old code, which doesn't update for arbitrary new post statuses relevant to new files
  
     if ($post_status == 'aside' ) {
-        include 'posts/posts-aside.php';
+        include 'posts/aside.php';
     } elseif ($post_status == 'feature' ) {
-        include 'posts/posts-feature.php';
+        include 'posts/feature.php';
     } else {
         include 'posts/posts.php';
     }
