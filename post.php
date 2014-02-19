@@ -1,36 +1,47 @@
-<header class="single <?php echo($post_status); ?>">
-    <div class="row">
-        <div class="one-quarter meta">
-            <?php if (file_exists($image)) { ?>
-                <div class="thumbnail">
-                    <img src="<?php echo($post_image); ?>" alt="<?php echo($post_title); ?>" />
-                </div>
-            <?php } ?>
-        </div>
-        <div class="three-quarters post">
-            <h1><?php echo($post_title); ?></h1>
-            <p>
-                <?php echo($post_author); ?><br>
-                <?php echo($published_date); ?><br>
-                <a href="<?php echo(BLOG_URL); ?>" alt="Back to <?php echo($blog_title); ?> ">&larr;</a> 
-            </p>
-        </div>
-    </div>
-</header>
-<article class="single <?php echo($post_status); ?>">
-    <div class="row">
-        <div class="one-quarter meta">
-        </div>
-        <div class="three-quarters post">
-            <?php echo($post_content); ?>
+<?php
+/*
+ * Goal: for file.php in $template_dir_name/posts; if ($post_status == $file){ include '$file';}
+ *
+ * foreach (glob("*.txt") as $filename) {}
+ *
+ *
+ *
+ */
+/*
+// this runs for 
+// this code returns three copies of the relevant post, not always with the title. 
+foreach (glob($template_dir . "posts/*.php") as $filename) {
+    // that runs for each post in the dir
+    // This next bit from http://txt2re.com/index-php.php3?s=./templates/benlk.com/posts/aside.php&8
+    
+    $re1='.*?';	# Non-greedy match on filler
+    $re2='(?:[a-z][a-z]+)';	# Uninteresting: word
+    $re3='.*?';	# Non-greedy match on filler
+    $re4='(?:[a-z][a-z]+)';	# Uninteresting: word
+    $re5='.*?';	# Non-greedy match on filler
+    $re6='(?:[a-z][a-z]+)';	# Uninteresting: word
+    $re7='.*?';	# Non-greedy match on filler
+    $re8='(?:[a-z][a-z]+)';	# Uninteresting: word
+    $re9='.*?';	# Non-greedy match on filler
+    $re10='((?:[a-z][a-z]+))';	# Word 1
+    if ($c=preg_match_all ("/".$re1.$re2.$re3.$re4.$re5.$re6.$re7.$re8.$re9.$re10."/is", $filename, $matches))
+    {
+        include $filename;
+    } else {
+        include 'posts/posts.php';
+    }
+}
+*/
 
-            <ul class="actions">
-                <li><a class="button" href="https://twitter.com/intent/tweet?screen_name=<?php echo($post_author_twitter); ?>&text=Re:%20<?php echo($post_link); ?>%20" data-dnt="true">Comment on Twitter</a></li>
-                <li><a class="button" href="https://twitter.com/intent/tweet?text=&quot;<?php echo($post_title); ?>&quot;%20<?php echo($post_link); ?>%20via%20&#64;<?php echo($post_author_twitter); ?>" data-dnt="true">Share on Twitter</a></li>
-                <li><a class="button" href="<?php echo($blog_url); ?>">More Articles</a></li>
-            </ul>
-            <?php /* do Disqus comments stuff  include('custom/comments-disqus.php');*/ ?>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </div>
-    </div>
-</article>
+    //old code, which doesn't update for arbitrary new post statuses relevant to new files
+ 
+    if ($post_status == 'aside' ) {
+        include 'post/aside.php';
+    } elseif ($post_status == 'feature' ) {
+        include 'post/feature.php';
+    } else {
+        include 'post/post.php';
+    }
+
+?>
+
