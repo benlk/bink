@@ -12,6 +12,10 @@ Derived from:
 	https://gist.github.com/jazzsequence/5162736
 
 *********************************************************************************************/
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url(http://fonts.googleapis.com/css?family=Fenix);
+@import url(http://fonts.googleapis.com/css?family=Squada+One|Averia+Libre:700);
 
 /* Normalization
 *********************************************************************************************/
@@ -23,31 +27,38 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body {
 	background: #ffffff;
-	font-family: 'Merriweather', serif;
+	font-family: 'Fenix', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 27px;
 	color: #404040;
 	text-rendering: optimizeLegibility;
+	
 }
 
 /* Typography
 *********************************************************************************************/
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+	font-family: 'Squada One', 'Garamond', 'Georgia', sans-serif ; 
+    font-weight: 400;
 	color: #303030;
 	margin-bottom: 5px;
 	max-width: 90%;
 }
 
-h1, h2, h3, h4 { 
+h3, h4 { 
     font-size: 24px;
     line-height: 39px;
 }
-
+h1 {
+	font-size: 200%;
+}
 h3, h4 { 
     margin-top: 20px;
+}
+h2 {
+	font-size: 175%;
 }
 
 p, ul, ol {
@@ -85,113 +96,40 @@ a:hover, a:focus {
     color: #000000;
 }
 
+pre code {
+	border: none;
+	padding: 0;
+	border-radius: 0;
+	font-size: 90%;
+}
+
+pre {
+	max-width: 80%;
+	white-space: pre-wrap;
+	padding: 15px;
+	margin: 0 0 20px;
+	border: 1px dashed #bf370f;
+	border-radius: 7px
+}
 code, pre {
     font-family: 'Source Sans Pro', monospace;
     text-rendering: optimizeLegibility;
-    font-size: 18px;
+    font-size: 90%;
     letter-spacing: 0.1em;
     margin: 0 0.1em;
+	color: #ff4a14;
 }
 
-/* Posts
-*********************************************************************************************/
-
-article, header {
-    width: 100%;
-    border-bottom: 1px solid #f1f1f1;
-    padding: 60px 0;
+p {
+	margin: 0 0 20px;
 }
 
-article.draft {
-    display: none;
+p + p {
+	text-indent: 0;
 }
-
-article:last-child,
-article.single {
-    border-bottom: 0;
+small {
+	font-size: 90%;
 }
-
-.post blockquote {
-    border-left:.5em solid #eee;
-    padding: 0 2em;
-    margin-left:0;
-    max-width: 476px;
-}
-
-.post blockquote  cite {
-    font-size:14px;
-    line-height:20px;
-    color:#bfbfbf;
-}
-
-.post blockquote cite:before {
-    content: '\2014 \00A0';
-}
-
-.post blockquote p {  
-    color: #666;
-    max-width: 460px;
-}
-
-.post p a,
-.post ul a,
-.post ol a {
-    border-bottom: 1px solid #ebebeb;
-}
-
-.post p, 
-.post ul, 
-.post ol {
-    max-width: 85%;
-}
-
-.post img {
-    max-width: 100%;
-}
-
-/* Buttons
-*********************************************************************************************/
-
-.button {
-    background-color: #fbfbfb;
-    border: 1px solid #ebebeb;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 300;
-    border-radius: 40px;
-    color: #9b9b9b;
-    float: left;
-    margin: 0 0 10px 0;
-    padding: 8px 20px 9px;
-    
-}
-
-.button.small {
-    padding: 0px 12px 1px;
-    float: right;
-    margin: 5px 0 3px 0;
-}
-
-.button:hover {
-    color: #9b9b9b;
-    text-shadow: none;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-}
-
-ul.actions {
-    width: 100%;
-    float: left;
-    margin: 0;
-}
-
-ul.actions li {
-    width: 100%;
-    float: left;
-    margin-top: 3px;
-    list-style: none;
-}
-
 /* Meta
 *********************************************************************************************/
 
@@ -208,7 +146,7 @@ ul.actions li {
     width: 100%;
     float: right;
     margin-right: 14px;
-    padding: 20px 0 26px;
+    padding: 0 0 0px;
     position: relative;
 }
 
@@ -229,9 +167,10 @@ ul.actions li {
 }
 
 .thumbnail {
-    background-color: #fbfbfb;
-    border: 1px solid #ebebeb;
-    border-radius: 50%;
+	background-color: #404040;
+	border-color: #202020;
+	border: 1px solid #ebebeb;
+    border-radius: 0%;
     width: 60px;
     height: 60px;
     padding: 5px;
@@ -247,10 +186,304 @@ ul.actions li {
 }
 
 .thumbnail img {
-    border-radius: 50%;
+    border-radius: 0%;
     width: 100%;
     height: 100%;
 }
+/* Buttons
+*********************************************************************************************/
+
+.button {
+    background-color: #fbfbfb;
+    border: 1px solid #ebebeb;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+	border-radius: 0px;
+    color: #9b9b9b;
+    float: left;
+    margin: 0 0 10px 0;
+    padding: 8px 20px 9px;
+    
+}
+
+.button.small {
+    padding: 0px 12px 1px;
+    float: right;
+    margin: 5px 0 3px 0;
+}
+
+.button:hover {
+    color: #9b9b9b;
+    text-shadow: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+ul.actions {
+    width: auto;
+    float: left;
+    margin: 0;
+}
+
+ul.actions li {
+    width: 100%;
+    float: left;
+    display: inline;
+    list-style: none;
+    margin: 0 0 3px 5px;
+}
+
+/* Intro 
+***********************************************************************/
+header {
+	background: #555555; /* Old browsers */
+	background-image: url("./custom/nasty_fabric.png");
+	color: #eee;
+	text-shadow: 0px 0px 15px #000000;
+}
+
+header h1, 
+header h2, 
+header h3, 
+header h4, 
+header h5, 
+header h6 {
+	color: #ff4a14;
+	margin-bottom: 5px;
+	max-width: 90%;
+}
+
+header {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 90%;
+    line-height: 19px;
+    font-weight: 300;
+    color: #b3b3b1;
+    text-align: left;
+}
+header .meta {
+	text-align: right;
+}
+header .meta a:hover {
+    color: #303030;
+}
+header .meta ul {
+    width: 100%;
+    float: right;
+    margin-right: 14px;
+    padding: 20px 0 26px;
+    position: relative;
+}
+
+header .meta ul li {
+    list-style: none;
+}
+
+header .meta ul li span {
+    color: #ebebeb;
+}
+
+header .meta ul li:after { 
+    color: #ebebeb;
+    content: " -";
+}
+
+header .meta ul li:first-child { 
+    font-weight: 400;
+}
+
+header a {
+    color: #b3b3b1;
+    border: 0px none rgba(0,0,0,0);
+}
+
+header p {
+	margin: 0;
+}
+
+header .thumbnail {
+    background-color: #fbfbfb;
+    border: 1px solid #ebebeb;
+    border-radius: 0%;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    float: right;
+    margin-right: -21px;
+    -moz-transition-duration: 0.05s;
+    -webkit-transition-duration: 0.05s;
+}
+
+header ul {
+	margin-left: 0px;
+}
+
+header ul.links li {
+	width: auto;
+	margin-right: 5px;
+	margin-top: 3px;
+    display: inline;
+    float: left;
+    border: 1px solid #ebebeb;
+    list-style: none;
+	color: #ebebeb;
+	font-size: 90%;
+    line-height: 24px;
+    border-radius: 0px;
+    float: left;
+    padding: 8px 20px 9px;
+}
+
+header ul.links li a {
+	color: #ebebeb;
+}
+
+header ul.links li:hover {
+	border: 1px solid #303030;
+	color: #303030;
+}
+header .links {
+	padding-top: 20px;
+}
+
+header.intro {
+	height: 100%;
+	max-height: 900px;
+}
+
+/* Feature
+ * These are really just demo options; please construct your own CSS for better fun
+ ***********************************************************************/
+
+.feature {
+	background: url("./squairy_light.png") #ffffff repeat;
+}
+
+.feature .post {
+	background-color: #ffffff;
+}
+
+.feature .thumbnail {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 0%;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    float: right;
+    margin-right: -21px;
+    -moz-transition-duration: 0.05s;
+    -webkit-transition-duration: 0.05s;
+}
+
+.feature .meta ul {
+	padding: 20px 0 26px;
+}
+/* Posts
+*********************************************************************************************/
+
+article, header {
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 30px 0;
+}
+
+article.draft {
+    display: none;
+}
+
+article:last-child,
+article.single {
+    border-bottom: 0;
+}
+
+blockquote {
+    border-left: 0.5em solid #000;
+	padding: 0 1em;
+    margin-left:0;
+    max-width: 476px;
+}
+
+blockquote  cite {
+    font-size:14px;
+    line-height:20px;
+    color:#bfbfbf;
+}
+
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote p {  
+    color: #666;
+    max-width: 460px;
+}
+
+.post p a,
+.post ul a,
+.post ol a {
+	color: #000;
+    border-bottom: 1px solid #59acf3;
+}
+.post a:hover, .post a:active {
+	color: #C5D2DD;
+}
+
+.post p, 
+.post ul, 
+.post ol {
+    max-width: 85%;
+}
+
+.post img {
+    max-width: 100%;
+}
+a img {
+	border: none;
+}
+/* Aside
+***********************************************************************/
+
+article.aside {
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 30px 0 0 0;
+}
+
+.aside .thumbnail{
+	display: none;
+}
+
+.aside h2 {
+	display: none;
+}
+
+.aside .meta ul {
+	border: none;
+	width: 100%;
+	float: right;
+	margin-right: 14px;
+	position: relative;
+}
+
+.aside .meta ul li:after {
+	color: transparent;
+}
+
+.aside .frontpage .post-intro {
+	float: left;
+	clear: none;
+}
+.aside .frontpage .post-actions {
+	display: none;
+	float: left;
+	clear: none;
+}
+.aside .frontpage .post-actions .actions li {
+	
+}
+
 
 /* Powered by Dropplets
 *********************************************************************************************/
@@ -279,6 +512,14 @@ ul.actions li {
     height: 15px;
     float: left;
     margin: 5px 5px 0 -2px;
+}
+
+/* Disqus
+*********************************************************************************************/
+#disqus_thread {
+	margin: 1em;
+	padding-top: 0.5em;
+	clear: both;
 }
 
 /* XL
