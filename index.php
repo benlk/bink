@@ -13,6 +13,10 @@
 		<!--<link rel="stylesheet" href="<?php echo($template_dir_url); ?>custom/style.css">-->
         <link rel="stylesheet" href="<?php echo($template_dir_url); ?>subdiv.css">
         <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+        <?php if($post_status == "revealjs") { ?>
+        <link rel="stylesheet" href="<?php echo($template_dir_url); ?>revealjs/reveal.min.css">
+        <link rel="stylesheet" href="<?php echo($template_dir_url); ?>revealjs/reveal-bink.css">
+        <?php } ?>
         
 	<link rel="shortcut icon" href="<?php echo($template_dir_url); ?>custom/favicon.png">
 	<script src="jquery-1.10.2.min.js"></script>        
