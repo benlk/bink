@@ -213,7 +213,6 @@ small {
 .button {
     background-color: #fbfbfb;
     border: 1px solid #ebebeb;
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: 300;
@@ -222,7 +221,7 @@ small {
     float: left;
     margin: 0 0 10px 0;
     padding: 8px 20px 9px;
-    
+    white-space: nowrap;
 }
 
 .button.small {
@@ -244,7 +243,6 @@ ul.actions {
 }
 
 ul.actions li {
-    width: 100%;
     float: left;
     display: inline;
     list-style: none;
