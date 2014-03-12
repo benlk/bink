@@ -11,10 +11,6 @@
         <div class="three-quarters post">
             
             <?php echo($post_content); ?>
-
-            <ul class="actions">
-                <li><a class="button" href="<?php echo($post_link); ?>">Continue Reading &rarr;</a></li>
-            </ul>
         </div>
     </div>
 </article>
