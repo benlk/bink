@@ -7,9 +7,14 @@
 }
 .reveal {
     position: absolute;
-    font-family: 'Fenix', serif;
     color: #404040;
     height: 100%;
+    font-size: 30px;
+}
+::selection {
+	color: #fff;
+	background: #bbb;
+	text-shadow: none;
 }
 
 .reveal h1,
@@ -36,6 +41,31 @@
          0 20px 20px rgba(0, 0, 0, 0.15); }
 }
 
+
+.reveal pre {
+	max-width: 80%;
+	white-space: pre-wrap;
+	padding: 15px;
+	margin: 20px;
+	border: 1px dashed #bf370f;
+	border-radius: 50px
+}
+.reveal code {
+    font-family: inherit;
+    text-rendering: optimizeLegibility;
+    margin: 0 0.1em;
+	color: inherit;
+    background-color: #eeeeee;
+}
+.reveal pre code {
+	border: none;
+	padding: 0;
+	border-radius: 0;
+	font-size: 90%;
+	color: #ff4a14;
+    font-family: monospace, monospace;
+    background-color: transparent;
+}
 
 .reveal .controls, .reveal .progress {
     position: absolute;
