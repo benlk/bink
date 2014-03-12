@@ -251,6 +251,96 @@ ul.actions li {
     margin: 0 0 3px 5px;
 }
 
+/* Feature
+ * These are really just demo options; please construct your own CSS for better fun
+ ***********************************************************************/
+
+.feature {
+	background: url("./squairy_light.png") #ffffff repeat;
+}
+
+.feature .post {
+	background-color: #ffffff;
+}
+
+.feature .thumbnail {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 0%;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    float: right;
+    margin-right: -21px;
+    -moz-transition-duration: 0.05s;
+    -webkit-transition-duration: 0.05s;
+}
+
+.feature .meta ul {
+	padding: 20px 0 26px;
+}
+/* Posts
+*********************************************************************************************/
+
+article, header {
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 30px 0;
+}
+
+article.draft {
+    display: none;
+}
+
+article:last-child,
+article.single {
+    border-bottom: 0;
+}
+
+blockquote {
+    border-left: 0.2em solid #999;
+	padding: 0 1em;
+    margin-left:0;
+    max-width: 476px;
+}
+
+blockquote  cite {
+    font-size:14px;
+    line-height:20px;
+    color:#bfbfbf;
+}
+
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote p {
+    color: #666;
+    max-width: 460px;
+}
+
+article .post p a,
+article .post ul a,
+article .post ol a {
+	color: #000;
+    border-bottom: 1px solid #59acf3;
+}
+.post a:hover, .post a:active {
+	color: #C5D2DD;
+}
+
+.post p,
+.post ul,
+.post ol {
+    max-width: 85%;
+}
+
+.post img {
+    max-width: 100%;
+}
+a img {
+	border: none;
+}
 /* Intro 
 ***********************************************************************/
 header {
@@ -353,96 +443,7 @@ header.intro h1 {
 }
 */
 
-/* Feature
- * These are really just demo options; please construct your own CSS for better fun
- ***********************************************************************/
 
-.feature {
-	background: url("./squairy_light.png") #ffffff repeat;
-}
-
-.feature .post {
-	background-color: #ffffff;
-}
-
-.feature .thumbnail {
-    background-color: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 0%;
-    width: 60px;
-    height: 60px;
-    padding: 5px;
-    float: right;
-    margin-right: -21px;
-    -moz-transition-duration: 0.05s;
-    -webkit-transition-duration: 0.05s;
-}
-
-.feature .meta ul {
-	padding: 20px 0 26px;
-}
-/* Posts
-*********************************************************************************************/
-
-article, header {
-    width: 100%;
-    border-bottom: 1px solid #f1f1f1;
-    padding: 30px 0;
-}
-
-article.draft {
-    display: none;
-}
-
-article:last-child,
-article.single {
-    border-bottom: 0;
-}
-
-blockquote {
-    border-left: 0.2em solid #999;
-	padding: 0 1em;
-    margin-left:0;
-    max-width: 476px;
-}
-
-blockquote  cite {
-    font-size:14px;
-    line-height:20px;
-    color:#bfbfbf;
-}
-
-blockquote cite:before {
-    content: '\2014 \00A0';
-}
-
-blockquote p {  
-    color: #666;
-    max-width: 460px;
-}
-
-.post p a,
-.post ul a,
-.post ol a {
-	color: #000;
-    border-bottom: 1px solid #59acf3;
-}
-.post a:hover, .post a:active {
-	color: #C5D2DD;
-}
-
-.post p, 
-.post ul, 
-.post ol {
-    max-width: 85%;
-}
-
-.post img {
-    max-width: 100%;
-}
-a img {
-	border: none;
-}
 /* Aside
 ***********************************************************************/
 
