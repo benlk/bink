@@ -1,9 +1,11 @@
 
 <?php
+    // pulls file contents back together, minus header
     $raw_contents = join('', array_slice($fcontents, 6, $fcontents.length -1));
+    // splits file at first set of eight dashes
     $parts = explode("--------", $raw_contents, 2);
-    $revealjs = $parts[0];
-    $markdown = $parts[1];
+    $revealjs = $parts[0]; // everything before the first dashes
+    $markdown = $parts[1]; // everything after
 ?>
 <div class="reveal-viewport">
     <div class="reveal">
@@ -44,6 +46,9 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <script src="<?php echo $template_dir_url ;?>revealjs/reveal.min.js"></script>
 <script>
+    /* see https://github.com/hakimel/reveal.js/blob/master/README.md#configuration
+     * CSS file is chosen in index.php
+    */
     Reveal.initialize({
         controls: true,
         progress: true,
