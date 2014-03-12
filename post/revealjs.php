@@ -55,10 +55,10 @@
         embedded: true,
         mouseWheel: false,
 
-        width: 960,
-        height: 700,
-        margin: 0.1,
-        minScale: 0.2,
-        maxScale: 1.0,
+        width: 720,
+        height: 480,
+        //margin: 0.1,
+        //minScale: 0.2,
+        //maxScale: 1.0,
     });
 </script>
