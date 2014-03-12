@@ -39,6 +39,8 @@ foreach (glob($template_dir . "posts/*.php") as $filename) {
         include 'posts/aside.php';
     } elseif ($post_status == 'feature' ) {
         include 'posts/feature.php';
+    } elseif ($post_status == 'revealjs' ) {
+        include 'posts/revealjs.php';
     } else {
         include 'posts/posts.php';
     }
