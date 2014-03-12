@@ -9,6 +9,7 @@ Session.vim
 *.komodoproject
 *.xcf
 *.zip
+*.bak
 
 # OS files
 .DS_Store
