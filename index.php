@@ -22,10 +22,11 @@
         <?php get_header(); ?>
     </head>
 
-    <body>
-        <?php if($is_home) {
-			include("intro.php");
-		} elseif ($category) { ?>
+<?php if($is_home) { ?>
+    <body class="home">
+			<?php include("intro.php");
+ } elseif ($category) { ?>
+    <body class="category">
 	    <header>
 		<div class="row">
 		    <div class="one-quarter meta">
@@ -38,7 +39,8 @@
 		    </div>
 		</div>
 	    </header>
-	<?php } ?>
+<?php } ?>
+        <body>
         <?php echo($content); ?>
        
         <?php get_footer(); ?>
